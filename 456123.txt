@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+<script src ="login.js"></script>
+  <title>Maharshi</title>
+</head>
+
+<body>
+<style>
+{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'poppins',sans-serif;
+}
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:url('file:///C:/Users/mvkko/Downloads/Untitled.jpeg')no-repeat;
+background-size:cover;
+background-position:center;
+
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:lightgoldenrodyellow	;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:99;
+}
+.HOME{
+font-size:2em;
+color:mediumturquoise;
+user-select:none;
+}
+.navigation a{
+position:relative;
+font-size:1.1em;
+color:#8b0000	;
+text-decoration:none;
+font-weight:500;
+margin-left:40px;
+}
+.navigation a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:3px;
+background:#fa8072;
+border-radius:5px;
+transform:scaleX(0);
+transition:transform .5s;
+}
+.navigation a:hover::after{
+transform-origin:left;
+transform:scale(1);
+}
+
+.navigation.btmLogin-popup{
+width:130px;
+height:50px;
+background:transparent;
+border:2px solid #8b0000;
+outline:none;
+border-radius:6px
+cursor:pointer;
+font-size:1.1em;
+color:#ffdead;
+font-weight:500;
+margin-left:40px;
+transition:5s;
+}
+.navigation .btnLogin-popup:hover{
+background:#fff;
+color:#162938;
+}
+.wrapper{
+position:relative;
+width:400px;
+height:440;
+background:transparent;
+border:2px solid rgba(255,255,255,.5);
+border-radius:20px;
+backdrop-filter:blur(20px);
+box-shadow:0 0 30px rgba(0,0,0,.5)
+display:flex;
+justify:flex;
+justify-content:center;
+aligh:center;
+/*overflow:hidden;*/
+}
+.form-box h2{
+font-size:2em;
+color:#162938;
+text-align:center;
+}
+.input-box{
+position:relative;
+width:100%
+height:50px;
+border-bottom:2px solid #162938;
+margin:30px 0;
+}
+
+.input-box input{
+width:100%;
+height:100%;
+background:transoparent;
+border:none;
+outline:none;
+}
+.input-box .icon{
+position:absolute;
+right:8px;
+font-size:1.2em;
+color:#162938;
+line-height:57px;
+}
+.input-box input:focus label,
+.input-box input:valid label{
+top:-5px;
+}
+.rember-forget{
+font-size:.9em;
+color:#162938;
+font-weight:500;
+margin:-15px 0 15px;
+display:flex;
+justify-content:space-between;
+}
+.rember-forgot label input{
+accent-color:#162938;
+} 
+.btn{width:100%;
+height:45px;
+
+background:#8b0000;
+order:none;
+outline:none;
+border-radius:6px
+cursor:pointer;
+font-size:1em;
+color:#fff;
+font-weight:500;
+cursor:pointer;
+
+}
+.login-register{
+font-size:.9em;
+color:#162938;
+text-align:center;
+font-weight:500;
+margin:25px 0 10px;
+}
+.login-register p a{
+color:#162938;
+text-decoration:none;
+font-weight:600;
+}
+.login-register p a:hover{
+text-decoration:underline;
+}
+. wrapper.icon-close{
+position:absolute;
+top:0;
+right:0;
+width:45px;
+height:45px;
+background:#162938;
+font-size:2em;
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+border-botton-left-radius:20px;
+cursor:pointer;
+z-index:1;
+}
+</style>
+  <header>
+<h2 class="HOME">HOME</h2>
+<nav class ="navigation">
+<a href ="#">About</a>
+<a href ="#">GET</a>
+<a href ="#">Photos</a>
+<a href ="#">Contact</a>
+<button class="btnLogin-popup">Login</button>
+</nav>
+</header>
+<div class="wrapper">
+<span class="icon-close"><ion-icon name="close"></ion-icon></span>
+<div class="form-box login">
+<h2>Login</h2>
+<form action="#">
+<div class="input-box">
+<span class="icon"><ion-icon name="mail"></ion-icon></span>
+<input type="email" required>
+<label>Email</label>
+</div>
+<div class="input-box">
+<span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+<input type="password" required>
+<label>Password</label>
+</div>
+<div class="remember-forget">
+<label class="container">Remember me
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+<a href="#">Forgot Password?</a>
+</label>
+</div>
+<button type="submit" name=""value="login" onclick="validate()">Login
+</button>
+<div class="login-register">
+<p>Don't have an account?
+<a href ="#" class="register-link">Register</a>
+</p>
+</form>
+</div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+
+</html>
